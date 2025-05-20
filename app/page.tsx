@@ -1,6 +1,9 @@
+import SensorTable from './components/SensorTable';
 
 export default function Home() {
   return (
-      <div>hello</div>
+    <main className="p-4">
+      <SensorTable />
+    </main>
   );
 }
