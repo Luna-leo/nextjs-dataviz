@@ -1,0 +1,31 @@
+[
+  {
+    "plant_name": "PlantA",
+    "machines": [
+      {
+        "machine_no": "Machine1",
+        "ranges": [
+          { "start": "2024-04-10", "end": "2024-05-10" },
+          { "start": "2024-06-10", "end": "2024-07-20" }
+        ]
+      },
+      {
+        "machine_no": "Machine2",
+        "ranges": [
+          { "start": "2024-03-01", "end": "2024-03-20" }
+        ]
+      }
+    ]
+  },
+  {
+    "plant_name": "PlantB",
+    "machines": [
+      {
+        "machine_no": "Machine1",
+        "ranges": [
+          { "start": "2024-05-15", "end": "2024-06-15" }
+        ]
+      }
+    ]
+  }
+]

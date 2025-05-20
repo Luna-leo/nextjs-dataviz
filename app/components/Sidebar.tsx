@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 const menuItems = [
   { href: '/', label: 'ユニットタグマスター' },
   { href: '/data-selection', label: 'データ選択' },
+  { href: '/db-list', label: 'DB化済みデータ' },
 ];
 
 export default function Sidebar() {
