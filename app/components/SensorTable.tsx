@@ -75,6 +75,7 @@ function pivotData(records: ParameterRecord[]) {
       return {
         field,
         headerName: `${plant} / ${machine} / ${source}`,
+        renderHeader: () => source,
         width: 120,
       };
     }),
