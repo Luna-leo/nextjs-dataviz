@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "plant_name": "PlantA",
+    "machine_no": "Machine1",
+    "label": "L001",
+    "label_description": "温度異常",
+    "event": "Overheat",
+    "event_detail": "Machine exceeded 80C",
+    "start_time": "2024-06-01T10:00:00Z",
+    "end_time": "2024-06-01T10:30:00Z"
+  },
+  {
+    "id": 2,
+    "plant_name": "PlantA",
+    "machine_no": "Machine2",
+    "label": "L002",
+    "label_description": "圧力低下",
+    "event": "LowPressure",
+    "event_detail": "Pressure below threshold",
+    "start_time": "2024-06-02T12:00:00Z",
+    "end_time": "2024-06-02T12:45:00Z"
+  },
+  {
+    "id": 3,
+    "plant_name": "PlantB",
+    "machine_no": "Machine1",
+    "label": "L003",
+    "label_description": "振動過大",
+    "event": "HighVibration",
+    "event_detail": "Vibration level too high",
+    "start_time": "2024-06-03T09:00:00Z",
+    "end_time": "2024-06-03T09:20:00Z"
+  }
+]
