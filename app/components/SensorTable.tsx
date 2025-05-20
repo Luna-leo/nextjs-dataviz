@@ -70,11 +70,14 @@ function pivotData(records: ParameterRecord[]) {
   const columns: GridColDef[] = [
     { field: 'param_name_en', headerName: 'param_name_en', width: 160 },
     { field: 'param_name_ja', headerName: 'param_name_ja', width: 140 },
-    ...columnFields.map((field) => ({
-      field,
-      headerName: field.split('_')[2],
-      width: 120,
-    })),
+    ...columnFields.map((field) => {
+      const [plant, machine, source] = field.split('_');
+      return {
+        field,
+        headerName: `${plant} / ${machine} / ${source}`,
+        width: 120,
+      };
+    }),
   ];
 
   const columnGroupingModel: GridColumnGroupingModel = [];
