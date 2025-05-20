@@ -1,7 +1,7 @@
 [
   {
     "param_id": "P101",
-    "param_name": "temperature",
+    "param_name_en": "temperature",
     "param_name_ja": "温度",
     "plant_name": "PlantA",
     "machine_no": "Machine1",
@@ -10,7 +10,7 @@
   },
   {
     "param_id": "P102",
-    "param_name": "temperature",
+    "param_name_en": "temperature",
     "param_name_ja": "温度",
     "plant_name": "PlantA",
     "machine_no": "Machine2",
@@ -19,7 +19,7 @@
   },
   {
     "param_id": "P201",
-    "param_name": "pressure",
+    "param_name_en": "pressure",
     "param_name_ja": "圧力",
     "plant_name": "PlantA",
     "machine_no": "Machine1",
@@ -28,7 +28,7 @@
   },
   {
     "param_id": "P202",
-    "param_name": "pressure",
+    "param_name_en": "pressure",
     "param_name_ja": "圧力",
     "plant_name": "PlantA",
     "machine_no": "Machine2",
@@ -37,7 +37,7 @@
   },
   {
     "param_id": "P301",
-    "param_name": "vibration",
+    "param_name_en": "vibration",
     "param_name_ja": "振動",
     "plant_name": "PlantB",
     "machine_no": "Machine1",
@@ -46,7 +46,7 @@
   },
   {
     "param_id": "P302",
-    "param_name": "vibration",
+    "param_name_en": "vibration",
     "param_name_ja": "振動",
     "plant_name": "PlantB",
     "machine_no": "Machine1",
