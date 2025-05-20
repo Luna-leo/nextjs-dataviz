@@ -1,7 +1,7 @@
 import data from '@/data/parameter_id_master.json';
 import { NextResponse } from 'next/server';
 
-const API_URL = 'https://api.example.com/parameter_id_master';
+const API_URL = 'http://127.0.0.1:8000/pi_tag_master';
 
 export async function GET() {
   try {
