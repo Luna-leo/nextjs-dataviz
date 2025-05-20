@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import MuiXLicense from "./components/MuiXLicense";
+import Sidebar from "./components/Sidebar";
 
 
 
@@ -32,7 +33,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="flex h-screen">
+          <Sidebar />
+          <main className="flex-grow overflow-auto">{children}</main>
+        </div>
         <MuiXLicense />
       </body>
     </html>
