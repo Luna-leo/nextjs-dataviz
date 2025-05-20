@@ -22,8 +22,15 @@ type ParameterRecord = {
   insert_date: string;
 };
 
+type RowData = {
+  id: string;
+  param_name_en: string;
+  param_name_ja: string;
+  [key: string]: string;
+};
+
 function pivotData(records: ParameterRecord[]) {
-  const rowMap = new Map<string, any>();
+  const rowMap = new Map<string, RowData>();
   const columnFields: string[] = [];
   const plantMap = new Map<string, Map<string, Map<string, string>>>();
 
@@ -72,9 +79,9 @@ function pivotData(records: ParameterRecord[]) {
 
   const columnGroupingModel: GridColumnGroupingModel = [];
   plantMap.forEach((machineMap, plant) => {
-    const plantGroup: any = { groupId: plant, headerName: plant, children: [] };
+    const plantGroup: GridColumnGroupingModel[number] = { groupId: plant, headerName: plant, children: [] };
     machineMap.forEach((sourceMap, machine) => {
-      const machineGroup: any = {
+      const machineGroup: GridColumnGroupingModel[number] = {
         groupId: `${plant}-${machine}`,
         headerName: machine,
         children: [],
