@@ -47,9 +47,12 @@ function pivotData(records: ParameterRecord[]) {
     }
     const machineMap = plantMap.get(rec.plant_name);
     if (!machineMap.has(rec.machine_no)) {
-      machineMap.set(rec.machine_no, new Set());
+      machineMap.set(rec.machine_no, new Map());
     }
-    machineMap.get(rec.machine_no).add({ field, data_source: rec.data_source });
+    const sourceMap = machineMap.get(rec.machine_no);
+    if (!sourceMap.has(field)) {
+      sourceMap.set(field, rec.data_source);
+    }
   });
 
   const rows: GridRowsProp = Array.from(rowMap.values());
@@ -67,10 +70,14 @@ function pivotData(records: ParameterRecord[]) {
   const columnGroupingModel: GridColumnGroupingModel = [];
   plantMap.forEach((machineMap, plant) => {
     const plantGroup: any = { groupId: plant, headerName: plant, children: [] };
-    machineMap.forEach((sourceSet: Set<any>, machine: string) => {
-      const machineGroup: any = { groupId: `${plant}-${machine}`, headerName: machine, children: [] };
-      sourceSet.forEach((info: any) => {
-        machineGroup.children.push({ field: info.field, headerName: info.data_source });
+    machineMap.forEach((sourceMap: Map<string, string>, machine: string) => {
+      const machineGroup: any = {
+        groupId: `${plant}-${machine}`,
+        headerName: machine,
+        children: [],
+      };
+      sourceMap.forEach((dataSource: string, field: string) => {
+        machineGroup.children.push({ field, headerName: dataSource });
       });
       plantGroup.children.push(machineGroup);
     });
