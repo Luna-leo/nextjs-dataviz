@@ -8,7 +8,8 @@
     "event": "Overheat",
     "event_detail": "Machine exceeded 80C",
     "start_time": "2024-06-01T10:00:00Z",
-    "end_time": "2024-06-01T10:30:00Z"
+    "end_time": "2024-06-01T10:30:00Z",
+    "db_exists": true
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "event": "LowPressure",
     "event_detail": "Pressure below threshold",
     "start_time": "2024-06-02T12:00:00Z",
-    "end_time": "2024-06-02T12:45:00Z"
+    "end_time": "2024-06-02T12:45:00Z",
+    "db_exists": false
   },
   {
     "id": 3,
@@ -30,6 +32,7 @@
     "event": "HighVibration",
     "event_detail": "Vibration level too high",
     "start_time": "2024-06-03T09:00:00Z",
-    "end_time": "2024-06-03T09:20:00Z"
+    "end_time": "2024-06-03T09:20:00Z",
+    "db_exists": true
   }
 ]
