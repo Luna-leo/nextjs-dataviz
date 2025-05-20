@@ -16,6 +16,7 @@ type EventRecord = {
   event_detail: string;
   start_time: string;
   end_time: string;
+  db_exists: boolean;
 };
 
 type Props = {
@@ -33,6 +34,8 @@ export default function EventTable({ onSelectionChange }: Props) {
     { field: 'event_detail', headerName: 'event detail', width: 160 },
     { field: 'start_time', headerName: 'start', width: 170 },
     { field: 'end_time', headerName: 'end', width: 170 },
+    { field: 'db_exists', headerName: 'status', width: 120,
+      valueFormatter: params => (params.value ? 'DB存在' : 'DB無'), },
   ]);
 
   useEffect(() => {
