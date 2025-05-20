@@ -68,8 +68,8 @@ function pivotData(records: ParameterRecord[]) {
   const rows: GridRowsProp = Array.from(rowMap.values());
 
   const columns: GridColDef[] = [
-    { field: 'param_name_en', headerName: 'param_name_en', width: 160 },
-    { field: 'param_name_ja', headerName: 'param_name_ja', width: 140 },
+    { field: 'param_name_en', headerName: 'ITEM', width: 160 },
+    { field: 'param_name_ja', headerName: '項目名', width: 140 },
     ...columnFields.map((field) => {
       const [plant, machine, source] = field.split('_');
       return {
