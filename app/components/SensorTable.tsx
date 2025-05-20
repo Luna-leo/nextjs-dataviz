@@ -128,6 +128,11 @@ export default function SensorTable() {
           pinnedColumns: { left: ['param_name_en', 'param_name_ja'] },
         }}
         showToolbar
+        slotProps={{
+          toolbar: {
+            csvOptions: { utf8WithBom: true },
+          },
+        }}
       />
     </Box>
   );
