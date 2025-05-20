@@ -115,7 +115,7 @@ export default function SensorTable() {
   }, []);
 
   return (
-    <Box sx={{ height: 600, width: '100%' }}>
+    <Box sx={{ height: 900, width: '100%' }}>
       <DataGrid rows={rows} columns={columns} columnGroupingModel={columnGroups} />
     </Box>
   );
