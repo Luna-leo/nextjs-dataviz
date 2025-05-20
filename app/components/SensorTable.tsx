@@ -11,10 +11,6 @@ import { useEffect, useState } from 'react';
 const DataGrid = dynamic(() => import('@mui/x-data-grid-premium').then(m => m.DataGridPremium), {
   ssr: false,
 });
-const GridToolbar = dynamic(
-  () => import('@mui/x-data-grid-premium').then((m) => m.GridToolbar),
-  { ssr: false },
-);
 
 type ParameterRecord = {
   param_id: string;
@@ -127,7 +123,7 @@ export default function SensorTable() {
         initialState={{
           pinnedColumns: { left: ['param_name_en', 'param_name_ja'] },
         }}
-        slots={{ toolbar: GridToolbar }}
+        showToolbar
       />
     </Box>
   );
