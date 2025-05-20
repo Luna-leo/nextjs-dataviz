@@ -14,7 +14,7 @@ const DataGrid = dynamic(() => import('@mui/x-data-grid-premium').then(m => m.Da
 
 type ParameterRecord = {
   param_id: string;
-  param_name: string;
+  param_name_en: string;
   param_name_ja: string;
   plant_name: string;
   machine_no: string;
@@ -35,12 +35,12 @@ function pivotData(records: ParameterRecord[]) {
   const plantMap = new Map<string, Map<string, Map<string, string>>>();
 
   records.forEach((rec) => {
-    const rowKey = `${rec.param_name}|${rec.param_name_ja}`;
+    const rowKey = `${rec.param_name_en}|${rec.param_name_ja}`;
     let row = rowMap.get(rowKey);
     if (!row) {
       row = {
         id: rowKey,
-        param_name_en: rec.param_name,
+        param_name_en: rec.param_name_en,
         param_name_ja: rec.param_name_ja,
       };
       rowMap.set(rowKey, row);
@@ -115,7 +115,7 @@ export default function SensorTable() {
   }, []);
 
   return (
-    <Box sx={{ height: 900, width: '100%' }}>
+    <Box sx={{ height: 900, width: '100%', padding: 2 }}>
       <DataGrid rows={rows} columns={columns} columnGroupingModel={columnGroups} />
     </Box>
   );
