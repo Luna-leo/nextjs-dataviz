@@ -10,6 +10,10 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 type Item = {
   id: string
   name: string
+  /**
+   * Optional English label used for searching.
+   */
+  nameEn?: string
   symbol?: string
 }
 
@@ -42,9 +46,9 @@ export function ParameterCombobox({ items, onSelect, displayKey = "name" }: Para
               {items.map((item) => (
                 <CommandItem
                   key={item.id}
-                  value={item.id}
-                  onSelect={(currentValue) => {
-                    onSelect(currentValue)
+                  value={`${item.id} ${item.name} ${item.nameEn ?? ""}`}
+                  onSelect={() => {
+                    onSelect(item.id)
                     setValue("")
                     setOpen(false)
                   }}
