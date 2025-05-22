@@ -49,21 +49,21 @@ import { CSS } from "@dnd-kit/utilities"
 
 // 仮のパラメータデータ
 const parameters = [
-  { id: "p1", name: "売上高" },
-  { id: "p2", name: "原価" },
-  { id: "p3", name: "営業利益" },
-  { id: "p4", name: "販売管理費" },
-  { id: "p5", name: "人件費" },
-  { id: "p6", name: "広告宣伝費" },
-  { id: "p7", name: "研究開発費" },
-  { id: "p8", name: "減価償却費" },
-  { id: "p9", name: "営業外収益" },
-  { id: "p10", name: "営業外費用" },
-  { id: "p11", name: "特別利益" },
-  { id: "p12", name: "特別損失" },
-  { id: "p13", name: "税引前当期純利益" },
-  { id: "p14", name: "法人税等" },
-  { id: "p15", name: "当期純利益" },
+  { id: "p1", name: "売上高", nameEn: "sales" },
+  { id: "p2", name: "原価", nameEn: "cost" },
+  { id: "p3", name: "営業利益", nameEn: "operating profit" },
+  { id: "p4", name: "販売管理費", nameEn: "selling & admin" },
+  { id: "p5", name: "人件費", nameEn: "personnel" },
+  { id: "p6", name: "広告宣伝費", nameEn: "advertising" },
+  { id: "p7", name: "研究開発費", nameEn: "R&D" },
+  { id: "p8", name: "減価償却費", nameEn: "depreciation" },
+  { id: "p9", name: "営業外収益", nameEn: "non-op income" },
+  { id: "p10", name: "営業外費用", nameEn: "non-op expense" },
+  { id: "p11", name: "特別利益", nameEn: "extra gain" },
+  { id: "p12", name: "特別損失", nameEn: "extra loss" },
+  { id: "p13", name: "税引前当期純利益", nameEn: "profit before tax" },
+  { id: "p14", name: "法人税等", nameEn: "corporate tax" },
+  { id: "p15", name: "当期純利益", nameEn: "net income" },
 ]
 
 // 演算子
