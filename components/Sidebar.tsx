@@ -7,6 +7,7 @@ const menuItems = [
   { href: '/', label: 'ユニットタグマスター' },
   { href: '/data-selection', label: 'データ選択' },
   { href: '/db-list', label: 'DB化済みデータ' },
+  { href: '/formula-section', label: '数式エディタ' },
 ];
 
 export default function Sidebar() {

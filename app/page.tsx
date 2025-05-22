@@ -1,4 +1,6 @@
-import SensorTable from './components/SensorTable';
+import { FormulaEditor } from "@/components/formula-editor";
+import SensorTable from "@/components/SensorTable";
+
 
 export default function Home() {
   return (

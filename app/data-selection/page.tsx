@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import EventTable from '../components/EventTable';
+import EventTable from '@/components/EventTable';
 import { Button, TextField } from '@mui/material';
 
 interface ManualCondition {

@@ -1,4 +1,4 @@
-import DBListTable from '../components/DBListTable';
+import DBListTable from '@/components/DBListTable';
 
 export default function DBListPage() {
   return (
