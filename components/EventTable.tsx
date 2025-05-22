@@ -35,7 +35,7 @@ export default function EventTable({ onSelectionChange }: Props) {
     { field: 'start_time', headerName: 'start', width: 170 },
     { field: 'end_time', headerName: 'end', width: 170 },
     { field: 'db_exists', headerName: 'status', width: 120,
-      valueFormatter: params => (params.value ? 'DB存在' : 'DB無'), },
+      valueFormatter: (params: { value: boolean }) => (params.value ? 'DB存在' : 'DB無'), },
   ]);
 
   useEffect(() => {
@@ -51,7 +51,11 @@ export default function EventTable({ onSelectionChange }: Props) {
         rows={rows}
         columns={columns}
         checkboxSelection
-        onRowSelectionModelChange={onSelectionChange}
+        onRowSelectionModelChange={
+          onSelectionChange
+            ? (selectionModel) => onSelectionChange(selectionModel as unknown as (string | number)[])
+            : undefined
+        }
       />
     </Box>
   );
